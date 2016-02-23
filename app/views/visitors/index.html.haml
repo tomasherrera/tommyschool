@@ -1,0 +1,18 @@
+/ Page Content
+.container
+  .row
+    .col-lg-12.text-center
+      %br
+      %h1 Clases de Inglés con el teacher Tommy
+      %p.lead
+        - if user_signed_in?
+          = "Bienvenido(a) #{current_user.name}"
+          %p
+            = link_to "Ir a mi panel", root_path, class: "btn-success btn-lg"
+        - else
+          = link_to "Registrate Gratis", new_user_registration_path, class: "btn-success btn-lg"
+      %ul.list-unstyled
+        //%li Bootstrap
+        //%li jQuery
+  / /.row
+/ /.container

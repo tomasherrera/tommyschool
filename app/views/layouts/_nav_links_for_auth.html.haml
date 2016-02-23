@@ -1,0 +1,6 @@
+- if user_signed_in?
+  %li= link_to 'Editar cuenta', edit_user_registration_path
+  %li= link_to 'Cerrar sesión', destroy_user_session_path, :method=>'delete'
+- else
+  %li= link_to 'Iniciar sesión', new_user_session_path
+  %li= link_to 'Crea tu cuenta', new_user_registration_path
