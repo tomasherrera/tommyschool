@@ -1,0 +1,18 @@
+.container
+  .row
+    %h3 Cursos Disponibles
+    - @courses.each do |course|
+      .panel.panel-primary{style: "max-width: 600px;"}
+        .panel-heading
+          %h3.panel-title= course.title
+        .panel-body{style: "height: 100px;"}
+        .panel-footer
+          %span{style: "float: left;"}
+            %strong Instructor:
+            = course.teacher.name
+          %span{style: "float: right;"}
+            %strong Nº de estudiantes:
+            2
+          .clearfix
+    - if @courses.empty?
+      %h3 No hay cursos disponibles en el momento. Vuelve pronto.
